@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.icon {
+    margin: 20px auto;
+    height: 14px;
+    width: 20px;
+    cursor: pointer;
+    position: relative;
+}
+.icon span {
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    transition: all .3s ease;
+}
+.icon span:first-child{
+    top: 0;
+}
+.icon span:nth-child(2)  {
+    top: 6px;
+}
+.icon span:last-child{
+    top: 12px;
+}
+
+.icon:hover span:nth-child(2){
+    opacity: 0;
+}
+.icon:hover span:first-child,
+.icon:hover span:last-child {
+    top: 6px;
+    background-color: red;
+}
+
+.icon:hover span:first-child{
+    transform: rotate(45deg);
+}
+.icon:hover span:last-child{
+    transform: rotate(-45deg);
+}
+
+
